@@ -14,7 +14,7 @@ When user click an answer I needed to change it is is Selected value. With handl
 4-) Delete Wrong answers
 
 I needed to create a logic for deleting two wrong answers. I did it with immutable way again. firsty I created clone arrays for questions, currentquestion and it's answers. Then I filtered answers array and returned it the array of wrong answers, with checkin if isCorrect !== true. Then with splice and Math Random Method I deleted first wrong answer randomly before handled it. I did same thing for second wrong asnwer and setState. Now I deleted two wrong answers succesfuly.
-if thereis no 2 two wrong answers, %50 still works.
+if thereis no 2 two wrong answers, %50 still works. 
 
 5-) Hint Handler Disabled.
 
@@ -26,7 +26,27 @@ Also for delete one answer I needed to arrange dynamically splice index with ran
 
 If user delete 3 wrong answer, chose correct answers doesnt work,
 After user input the name one time, system doesn't ask aagain.
+ifThere is just one answer, answer will be selected automatically
 
 7-) Talk about correct answers.
 
 8-) How I handled Sound (timeout, function, conditional rendering)
+
+9-) Includes, split
+
+10-) & > * {
+    z-index: 1;
+  }
+
+11-) display inline flex. I needed to use flexbox for each button that has exact width not 100% width. display inline flex was solution.
+
+12-) conditional animation with css helper styled components v4.0 show how to animate the button
+13-) smaller line height arranges bottom line
+
+14-) clip path without touching box shadow.
+
+15-) Animated placeholder.
+
+16-) 2 different transition effect timing on buttons and link animation
+17-) x:hover::before
+18-) How I calculated remained time
