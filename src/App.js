@@ -36,7 +36,10 @@ const Container = styled.div`
   min-height: 100vh;
   background-image: linear-gradient(to right bottom, white, rgba(220, 221, 225, 1));
 `
-
+const rotate = keyframes`
+  from{transform: rotate(0)}
+  to{ transform: rotate(360deg)}
+`
 const Header = styled.header`
   display: flex;
   justify-content: center;
@@ -67,6 +70,7 @@ const Header = styled.header`
   & > svg:last-child {
     font-size: 2rem;
     font-weight: 300;
+    animation: ${rotate} 6s infinite linear;
   }
 
   & > h1 {
