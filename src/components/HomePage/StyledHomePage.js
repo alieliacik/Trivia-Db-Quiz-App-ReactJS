@@ -49,7 +49,6 @@ const StyledHomePage = styled.main`
       outline: none;
     }
 
-  
     & > svg {
       font-size: 3.2rem;
       margin-bottom: 1.4rem;
@@ -130,11 +129,6 @@ const StyledHomePage = styled.main`
 
     &:focus {
       outline: none;
-      background-color: none;
-    }
-
-    &:active {
-      background-color: none;
     }
   }
 
