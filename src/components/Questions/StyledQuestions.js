@@ -130,11 +130,11 @@ const StyledQuestions = styled.section`
 
     &::before {
       content: open-quote;
-      top: 0;
+      top: -1rem;
       left: 2rem;
       line-height: 1;
       color: #192a56;
-      font-size: 20rem;
+      font-size: 17rem;
       position: absolute;
       font-family: sans-serif;
       z-index: 1;
