@@ -1,6 +1,6 @@
 <h1 style='text-align:center;'> Trivia Db Quiz App - React JS </h1>
 
-<strong> In this project, I used the most updated React Js futures with Styled Components; I used React Transition Group to animate when to mount or unmount something from DOM. I took data from THE MOVIE DATABASE API and showed users different data in different situations with beautiful animations.  The project has a responsive design for all devices. </strong>
+<strong> In this project, I used the most updated React Js futures with Styled Components; I used React Transition Group to animate when to mount or unmount something from DOM. I took data from OPEN TRIVIA DATABASE and showed users different data in different situations with beautiful animations conditionally. The project has a responsive design for all devices with the most updated CSS features. </strong>
 
 <h3>Netlify Link: https://vigilant-allen-2ab416.netlify.com/#/</h3>
 &nbsp;
@@ -9,14 +9,21 @@
 
 <hr>
 
-<strong> Let's start with the first animation. I really like to play with animations. I did not use any CSS library. I know how they can make slow big applications. My first animation appears once per minute. I didn't want to show the user when they visit the home page every time. One minute still not too much, but of course, I can determine the time. Now see the picture below.  </strong>
+<strong> Let's start handling data from API and Bring it ready to use. Firstly I am checking whether the user selected a category or difficulty or not. If there is no selection, questions come randomly. At the endpoint, the correct answer was separate from the wrong answers. I put it among the other answers randomly with the help of 'Math.random()' and 'splice()' methods. And then, I added 'isCorrect' and 'isSelected' values for each answer. Lastly, I created my ready to use object with a question, answers, category and difficulty values.</strong>
 
 &nbsp;
 
-![timeStamp](https://user-images.githubusercontent.com/57728302/75311016-6fbd5480-5823-11ea-896e-2c7f7e4cf4c0.JPG)
+![1-2](https://user-images.githubusercontent.com/57728302/76015245-f12e7a00-5ee8-11ea-9565-442a59a815c9.JPG)
 
 &nbsp;
 
+<strong> Result : </strong>
+
+&nbsp;
+
+![1](https://user-images.githubusercontent.com/57728302/76015623-6d28c200-5ee9-11ea-98c0-32b948c7c801.png)
+
+&nbsp;
 
 
 <hr>
