@@ -162,7 +162,6 @@ User can see quiz summary at the and of the quiz with selected and correct answe
 
 <hr>
 
-<strong>Result : </strong>
 &nbsp;
 ![nested ternary gif](https://user-images.githubusercontent.com/57728302/76026551-001f2780-5efd-11ea-9671-81c1884775b7.gif)
 
