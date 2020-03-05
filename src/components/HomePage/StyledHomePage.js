@@ -130,6 +130,11 @@ const StyledHomePage = styled.main`
 
     &:focus {
       outline: none;
+      background-color: none;
+    }
+
+    &:active {
+      background-color: none;
     }
   }
 
