@@ -1,95 +1,15 @@
 import React, { useState, useEffect } from "react"
+
 import { Route, Switch } from "react-router-dom"
+import StyledApp, { GlobalStyle } from "./StyledApp"
+
+import Header from "./components/Header/Header"
 import Questions from "./components/Questions/Questions"
 import HomePage from "./components/HomePage/HomePage"
 import QuizSummary from "./components/QuizSummary/QuizSummary"
 import ErrorPage from "./components/UI/ErrorPage/ErrorPage"
-import { faAmericanSignLanguageInterpreting, faCrosshairs } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import styled, { createGlobalStyle, keyframes } from "styled-components"
 import axios from "axios"
-
-const GlobalStyle = createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
-  html {
-    box-sizing: border-box;
-    font-size: 62.5%;
-
-    @media (max-width: 55em){
-      font-size: 54%;
-    }
-    
-  }
-  body {
-    font-family: "Rubik", sans-serif;
-  }
-`
-
-const Container = styled.div`
-  max-width: 80rem;
-  margin: 0 auto;
-  min-height: 100vh;
-  background-image: linear-gradient(to right bottom, white, rgba(220, 221, 225, 1));
-  box-shadow: 0 1rem 2rem rgba(25, 42, 86, 1);
-`
-const rotate = keyframes`
-  from{transform: rotate(0)}
-  to{ transform: rotate(360deg)}
-`
-const Header = styled.header`
-  display: flex;
-  justify-content: center;
-  height: 12rem;
-  padding-top: 2.6rem;
-  margin-bottom: 2rem;
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 300%;
-    background-color: rgba(25, 42, 86, 1);
-    border-radius: 34%;
-    transform: translateY(-70%);
-    box-shadow: 0 1rem 2rem rgba(53, 59, 72, 1);
-  }
-
-  & > svg {
-    color: #dfe6e9;
-    font-size: 4rem;
-    margin-right: 2rem;
-  }
-
-  & > svg:last-child {
-    font-size: 2rem;
-    font-weight: 300;
-    animation: ${rotate} 6s infinite linear;
-  }
-
-  & > h1 {
-    font-size: 4rem;
-    color: rgba(76, 209, 55, 1);
-    letter-spacing: 2px;
-    font-weight: 300;
-    margin-right: 0.4rem;
-  }
-
-  & > * {
-    z-index: 1;
-  }
-`
 
 const App = () => {
   const [questions, setQuestions] = useState([])
@@ -292,10 +212,10 @@ const App = () => {
           window.localStorage.setItem("name", inputValue)
           setStoredName(window.localStorage.getItem("name"))
         }
+        setIsSubmited(true)
       } else {
         alert("please enter valid name")
       }
-      setIsSubmited(true)
     }
   }
 
@@ -311,6 +231,7 @@ const App = () => {
     window.localStorage.removeItem("name")
     setStoredName(null)
   }
+
   let categoryName = null
   if (category === 9) categoryName = "General"
   else if (category === 21) categoryName = "Sports"
@@ -319,6 +240,7 @@ const App = () => {
   else if (category === 18) categoryName = "Computer Science"
   else if (category === 23) categoryName = "History"
   else categoryName = "Any Category"
+
   let content = (
     <Switch>
       <Route
@@ -343,6 +265,7 @@ const App = () => {
           />
         )}
       />
+
       <Route
         path='/questions'
         render={({ history }) => (
@@ -388,18 +311,15 @@ const App = () => {
       />
     </Switch>
   )
+
   if (error) content = <ErrorPage />
 
   return (
-    <Container>
+    <StyledApp>
       <GlobalStyle />
-      <Header>
-        <FontAwesomeIcon icon={faAmericanSignLanguageInterpreting} />
-        <h1>Trivia Db Quiz</h1>
-        <FontAwesomeIcon icon={faCrosshairs} />
-      </Header>
+      <Header />
       {content}
-    </Container>
+    </StyledApp>
   )
 }
 
