@@ -27,7 +27,7 @@
 
 <hr>
 
-<strong> I provide use three lifeline chances. I want to show how I created the logic for deleting two wrong answers. I created a clone for every variable for setting the state immutable and safely. Firstly I detected wrong answers; according to their length, I deleted 2 of them with the help of 'Math.random()', 'splice()' and filter() methods and sat state. If there are fewer then three answers, I selected the correct answer right away without waiting for the user. Also, I have 'playSound()' function for playing sound after the user used lifeline chance and 'wrongAnswersDeleted' state for the styling button and making it disabled. </strong>
+<strong> I provide the user three lifeline chances. I want to show how I created the logic for deleting two wrong answers. I created a clone for every variable for setting the state immutable and safely. Firstly I detected wrong answers; according to their length, I deleted 2 of them with the help of 'Math.random()', 'splice()' and filter() methods and sat state. If there are fewer then three answers, I selected the correct answer right away without waiting for the user. Also, I have 'playSound()' function for playing sound after the user used lifeline chance and 'wrongAnswersDeleted' state for the styling button and making it disabled. </strong>
 
 &nbsp;
 ![2](https://user-images.githubusercontent.com/57728302/76016635-318ef780-5eeb-11ea-8e51-bdb6ba2da472.JPG)
