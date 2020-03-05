@@ -89,13 +89,47 @@ User can see quiz summary at the and of the quiz with selected and correct answe
 ![selectaniamtion](https://user-images.githubusercontent.com/57728302/76024307-d95ef200-5ef8-11ea-997a-bacc134a2e1b.gif)
 &nbsp;
 
-<strong> Result:  </strong>
+<strong>As you can see, remained time connected with the pseudo-element of the header. It changes color if the user has fewer than 10 seconds.</strong>
 
+&nbsp;
+![remained](https://user-images.githubusercontent.com/57728302/76024902-e0d2cb00-5ef9-11ea-8697-500b306198a4.JPG)
+&nbsp;
+![remined](https://user-images.githubusercontent.com/57728302/76024905-e29c8e80-5ef9-11ea-8a5f-69fcaff30690.gif)
+&nbsp;
 
+<strong>I created this beautiful hover-select animation with the help of Styled Components again. I have different transition timing for different CSS properties. Also, with the 'cubic-bezier' property, I made animation more sweeter. </strong>
+
+&nbsp;
+![AnswerAnimation](https://user-images.githubusercontent.com/57728302/76025290-aae21680-5efa-11ea-8e95-3687cf4e61d8.JPG)
+&nbsp;
+![answerAnimation](https://user-images.githubusercontent.com/57728302/76025289-aa498000-5efa-11ea-99d9-bd6611e383ea.gif)
+&nbsp;
+
+<strong>I made this animation with different animation and different animations timings. </strong>
+
+&nbsp;
+![AnswerAnimation](https://user-images.githubusercontent.com/57728302/76025980-f3e69a80-5efb-11ea-951f-06c6275f20d2.JPG)
+&nbsp;
+![answerslide animation](https://user-images.githubusercontent.com/57728302/76025990-f648f480-5efb-11ea-82bc-a5183e1304ee.gif)
 &nbsp;
 <hr>
 
-<h3>Netlify Link: https://agitated-hugle-838e6c.netlify.com/#/</h3>
+<strong>I accomplished this style and animation with the help of React Transition Group. I could animate while unmounting stats. Also, I showed the user correct and wrong answers with different color and background colors. If the user selects the answer and it is correct or if the user selects the answer and it is incorrect or if the user doesn't select an answer, style changes. With the nested Ternary Operator, I accomplished this result with just one line code. </strong>
+
+&nbsp;
+![CSS trasition](https://user-images.githubusercontent.com/57728302/76026561-057c7200-5efd-11ea-8564-730aaf298430.JPG)
+&nbsp;
+![NestedTernary](https://user-images.githubusercontent.com/57728302/76026556-031a1800-5efd-11ea-99ee-60bfc90b1ef5.JPG)
+&nbsp;
+
+<strong>Result : </strong>
+&nbsp;
+![nested ternary gif](https://user-images.githubusercontent.com/57728302/76026551-001f2780-5efd-11ea-9671-81c1884775b7.gif)
+&nbsp;
+
+<hr>
+
+<h3>Netlify Link: https://vigilant-allen-2ab416.netlify.com/#/</h3>
 <h4><strong>Used technologies: </strong> React JS (React Hooks, Styled Components, React Transition Group, React Router), HTML, CSS.  </h4>
 
 
