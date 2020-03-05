@@ -89,6 +89,12 @@ const StyledQuestions = styled.section`
             transform: none;
           }
         }
+
+        @media (hover: none) {
+          &:hover {
+            transform: none;
+          }
+        }
       }
 
       .hint {
