@@ -39,6 +39,26 @@
 ![3](https://user-images.githubusercontent.com/57728302/76018550-399c6680-5eee-11ea-9b73-b36cdc1f1d3b.JPG)
 &nbsp;
 
+<strong> At the end of the quiz, I needed to calculate the answered questions. I did it with nested map functions for all questions and their answers if the answer's 'isSelected === true'</strong>
+
+&nbsp;
+![Answered](https://user-images.githubusercontent.com/57728302/76018827-bfb8ad00-5eee-11ea-8d2d-dd5b9a96d6ab.JPG)
+&nbsp;
+
+<h2> For Beter User Experience </h2>
+
+&nbsp;
+<strong>
+If the user doesn't fill the name input area, app fires alert. </br>
+If the user doesn't select the category or the difficulty level, the app brings random questions for the unselected section. </br> 
+After the user fill up the input name area app doesn't ask username until the user clicks the rename icon.</br>
+The Previous button for the first question, the Next button for the last question, lifeline chance buttons if the user doesn't have any unclickable.</br>
+If only one answer remains after the user has used the lifeline chances, the application directly selects that answer and prevents using the 'Select Correct Answer' lifeline.</br>
+If less than 10 seconds remaining for the quiz, remaining time and it's line change the color.</br>
+User can see quiz summary at the and of the quiz with selected and correct answers.
+</strong>
+&nbsp;
+
 <hr>
 
 <h2>CSS</h2>
@@ -52,28 +72,10 @@
 &nbsp;
 
 
-
-
-
-<hr>
-
-<h2>JAVASCRIPT</h2>
-
-&nbsp;
-
-
-<strong> For remoting on components, I used React Router, and the 'history.push()' method was beneficial when I used it for my logo to go home page. </strong>
-
-&nbsp;
-
-![historyPush](https://user-images.githubusercontent.com/57728302/75321447-cedc9280-583e-11ea-878f-3993d5e358ea.JPG)
-
-&nbsp;
-
 <hr>
 
 <h3>Netlify Link: https://agitated-hugle-838e6c.netlify.com/#/</h3>
-<h4><strong>Used technologies: </strong> React JS (React Hooks, Styled Components, React Transition Group, React Router, Material UI), HTML, CSS.  </h4>
+<h4><strong>Used technologies: </strong> React JS (React Hooks, Styled Components, React Transition Group, React Router), HTML, CSS.  </h4>
 
 
 
