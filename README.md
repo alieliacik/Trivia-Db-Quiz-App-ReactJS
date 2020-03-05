@@ -21,12 +21,6 @@
 ![1](https://user-images.githubusercontent.com/57728302/76015623-6d28c200-5ee9-11ea-98c0-32b948c7c801.png)
 &nbsp;
 
-<strong> Result : </strong>
-
-&nbsp;
-![1](https://user-images.githubusercontent.com/57728302/76015623-6d28c200-5ee9-11ea-98c0-32b948c7c801.png)
-&nbsp;
-
 <strong> I provide use three lifeline chances. I want to show how I created the logic for deleting two wrong answers. I created a clone for every variable for setting the state immutable and safely. Firstly I detected wrong answers; according to their length, I deleted 2 of them with the help of 'Math.random()', 'splice()' and filter() methods and sat state. If there are fewer then three answers, I selected the correct answer right away without waiting for the user. Also, I have 'playSound()' function for playing sound after the user used lifeline chance and 'wrongAnswersDeleted' state for the styling button and making it disabled. </strong>
 
 &nbsp;
@@ -37,6 +31,12 @@
 
 &nbsp;
 ![replaceFunction](https://user-images.githubusercontent.com/57728302/76017572-d231e700-5eec-11ea-9554-b45210256156.JPG)
+&nbsp;
+
+<strong> I showed the user question's category and difficulty level for each question. When I took data from API, some of them had 'Category: part some of them not. I removed 'Category: ' conditionally if they have and added to all of them. Whit this technic I prevented duplication. The difficulty level had not capitalized; I made it capitalized with 'toUpperCase()' and 'slice()' methods.</strong>
+
+&nbsp;
+![3](https://user-images.githubusercontent.com/57728302/76018550-399c6680-5eee-11ea-9b73-b36cdc1f1d3b.JPG)
 &nbsp;
 
 <hr>
