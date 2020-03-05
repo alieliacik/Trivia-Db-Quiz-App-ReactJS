@@ -1,68 +1,60 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 style='text-align:center;'> Trivia Db Quiz App - React JS </h1>
 
-## Available Scripts
+<strong> In this project, I used the most updated React Js futures with Styled Components; I used React Transition Group to animate when to mount or unmount something from DOM. I took data from THE MOVIE DATABASE API and showed users different data in different situations with beautiful animations.  The project has a responsive design for all devices. </strong>
 
-In the project directory, you can run:
+<h3>Netlify Link: https://vigilant-allen-2ab416.netlify.com/#/</h3>
+&nbsp;
 
-### `npm start`
+![Main](https://user-images.githubusercontent.com/57728302/76013725-6a789d80-5ee6-11ea-8988-a2a2267d1a04.gif)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<hr>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<strong> Let's start with the first animation. I really like to play with animations. I did not use any CSS library. I know how they can make slow big applications. My first animation appears once per minute. I didn't want to show the user when they visit the home page every time. One minute still not too much, but of course, I can determine the time. Now see the picture below.  </strong>
 
-### `npm test`
+&nbsp;
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![timeStamp](https://user-images.githubusercontent.com/57728302/75311016-6fbd5480-5823-11ea-896e-2c7f7e4cf4c0.JPG)
 
-### `npm run build`
+&nbsp;
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<hr>
 
-### `npm run eject`
+<h2>CSS</h2>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<strong> For design I used 'font-size: 62.5%' technic. Because it is effortless to use and make your design responsive. Now see the picture below. </strong>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+&nbsp;
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![GlobalStyle](https://user-images.githubusercontent.com/57728302/75311710-adbb7800-5825-11ea-9d40-920450b366b6.JPG)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+&nbsp;
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+<hr>
 
-### Analyzing the Bundle Size
+<h2>JAVASCRIPT</h2>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+&nbsp;
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+<strong> For remoting on components, I used React Router, and the 'history.push()' method was beneficial when I used it for my logo to go home page. </strong>
 
-### Advanced Configuration
+&nbsp;
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+![historyPush](https://user-images.githubusercontent.com/57728302/75321447-cedc9280-583e-11ea-878f-3993d5e358ea.JPG)
 
-### Deployment
+&nbsp;
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+<hr>
 
-### `npm run build` fails to minify
+<h3>Netlify Link: https://agitated-hugle-838e6c.netlify.com/#/</h3>
+<h4><strong>Used technologies: </strong> React JS (React Hooks, Styled Components, React Transition Group, React Router, Material UI), HTML, CSS.  </h4>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+
