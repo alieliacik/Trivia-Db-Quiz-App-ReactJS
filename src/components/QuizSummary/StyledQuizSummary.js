@@ -82,7 +82,8 @@ const StyledQuizSummary = styled.section`
   }
 
   .questionSummary {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    font-weight: 500;
     padding-top: 0.6rem;
     border-top: 2px solid rgba(25, 42, 86, 1);
     &:not(:first-child) {
