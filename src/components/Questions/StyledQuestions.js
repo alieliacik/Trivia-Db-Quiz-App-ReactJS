@@ -84,7 +84,7 @@ const StyledQuestions = styled.section`
           margin-right: 0.2rem;
         }
 
-        @media only screen and (hover: none) {
+        @media (max-width: 43.75em) {
           &:hover {
             transform: none;
           }
@@ -183,6 +183,9 @@ const StyledQuestions = styled.section`
 
       @media (max-width: 43.75em) {
         width: 28.5%;
+      }
+
+      @media (hover: none) {
         &:hover {
           transform: none;
         }
