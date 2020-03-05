@@ -114,7 +114,7 @@ export const AnswerSummary = styled.li`
   list-style: none;
   font-size: 1.6rem;
   margin-left: 0.3rem;
-  padding: 0.7rem 0;
+  padding: 0.7rem 1rem;
   width: 40rem;
   background-color: ${props => (props.ans.isSelected ? (props.ans.isCorrect ? "rgba(251, 197, 49,1.0)" : "rgba(194, 54, 22,1.0)") : props.ans.isCorrect && "rgba(25, 42, 86,1.0)")};
   color: ${props => (props.ans.isSelected ? (props.ans.isCorrect ? "black" : "white") : props.ans.isCorrect && "white")};
