@@ -12,17 +12,13 @@
 <strong> Let's start handling data from API and Bring it ready to use. Firstly I am checking whether the user selected a category or difficulty or not. If there is no selection, questions come randomly. At the endpoint, the correct answer was separate from the wrong answers. I put it among the other answers randomly with the help of 'Math.random()' and 'splice()' methods. And then, I added 'isCorrect' and 'isSelected' values for each answer. Lastly, I created my ready to use object with a question, answers, category and difficulty values.</strong>
 
 &nbsp;
-
 ![1-2](https://user-images.githubusercontent.com/57728302/76015245-f12e7a00-5ee8-11ea-9565-442a59a815c9.JPG)
-
 &nbsp;
 
 <strong> Result : </strong>
 
 &nbsp;
-
 ![1](https://user-images.githubusercontent.com/57728302/76015623-6d28c200-5ee9-11ea-98c0-32b948c7c801.png)
-
 &nbsp;
 
 
