@@ -48,8 +48,7 @@
 <h2> For Beter User Experience </h2>
 
 &nbsp;
-<strong>
-If the user doesn't fill the name input area, app fires alert. </br>
+<strong>If the user doesn't fill the name input area, app fires alert. </br>
 If the user doesn't select the category or the difficulty level, the app brings random questions for the unselected section. </br> 
 After the user fill up the input name area app doesn't ask username until the user clicks the rename icon.</br>
 The Previous button for the first question, the Next button for the last question, lifeline chance buttons if the user doesn't have any unclickable.</br>
@@ -66,12 +65,34 @@ User can see quiz summary at the and of the quiz with selected and correct answe
 <strong> For design I used 'font-size: 62.5%' technic. Because it is effortless to use and make your design responsive. Now see the picture below. </strong>
 
 &nbsp;
+![globalState](https://user-images.githubusercontent.com/57728302/76023609-77ea5380-5ef7-11ea-8fd5-8ead8c123a7d.JPG)
+&nbsp;
 
-![GlobalStyle](https://user-images.githubusercontent.com/57728302/75311710-adbb7800-5825-11ea-9d40-920450b366b6.JPG)
+<strong> After I made 0 all margins and paddings for whole dom elements, including before and after elements, I sat font size to %62.5 with the help of Styled Components createGlobalStyle. It means every one rem equal 10px now. Of course, I could use 10px instead of 1rem. But if you use for your whole parameters; when you start to make your device responsive for small screen devices, all you have to do just decrease the font size and your whole 1rems 8.5px now instead of 10. I reached this result with just decreasing HTML font size. Font sizes, margins, paddings, height and widths have rem value. With a small decrease of HTML font-size value, my website almost full responsive for I tablet except a couple of little things. See the gif below... </strong>
 
+&nbsp;
+![responsiveGif](https://user-images.githubusercontent.com/57728302/76023709-ac5e0f80-5ef7-11ea-8f93-ace5c5e87111.gif)
+&nbsp;
+
+<strong> Curved header with adding the Header '::after' pseudo element. </strong>
+
+&nbsp;
+![after](https://user-images.githubusercontent.com/57728302/76023925-2db5a200-5ef8-11ea-8bd1-0ad4cc01f3f5.JPG)
 &nbsp;
 
 
+<strong>With the power of the Styled Components, you can see how I animated when the user selects a category or difficulty. </strong>
+
+&nbsp;
+![add outline](https://user-images.githubusercontent.com/57728302/76024104-84bb7700-5ef8-11ea-8079-c95cb7f75a72.JPG)
+&nbsp;
+![selectaniamtion](https://user-images.githubusercontent.com/57728302/76024307-d95ef200-5ef8-11ea-997a-bacc134a2e1b.gif)
+&nbsp;
+
+<strong> Result:  </strong>
+
+
+&nbsp;
 <hr>
 
 <h3>Netlify Link: https://agitated-hugle-838e6c.netlify.com/#/</h3>
