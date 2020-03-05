@@ -155,9 +155,9 @@ const StyledHomePage = styled.main`
 `
 
 export const SelectAnimation = keyframes`
-  0% {outline: 3px solid black;outline-color:  rgba(39, 60, 117,1.0);}
-  45% {outline: 8px solid black;outline-color:  rgba(39, 60, 117,1.0);}
-  100% {outline: 6px solid black;outline-color:  rgba(39, 60, 117,1.0);}
+  0% {transform: scale(1)}
+  45% {transform: scale(1.15)}
+  100% {transform: scale(1.075)}
 `
 
 export const CategorySelect = styled.button`
