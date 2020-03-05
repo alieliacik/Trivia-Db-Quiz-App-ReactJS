@@ -45,10 +45,7 @@ const StyledHomePage = styled.main`
       background-color: rgba(39, 60, 117, 1);
     }
 
-    &:focus {
-      outline: none;
-    }
-
+  
     & > svg {
       font-size: 3.2rem;
       margin-bottom: 1.4rem;
