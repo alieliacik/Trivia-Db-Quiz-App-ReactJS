@@ -38,7 +38,7 @@ const StyledHomePage = styled.main`
     text-transform: uppercase;
     font-weight: 400;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.3s linear;
 
     &:hover {
       color: white;
