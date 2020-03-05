@@ -185,9 +185,6 @@ const StyledQuestions = styled.section`
 
       @media (max-width: 43.75em) {
         width: 28.5%;
-      }
-
-      @media (hover: none) {
         &:hover {
           transform: none;
         }
