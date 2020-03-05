@@ -23,6 +23,11 @@ const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
     font-size: 62.5%;
+
+    @media (max-width: 55em){
+      font-size: 54%;
+    }
+    
   }
   body {
     font-family: "Rubik", sans-serif;
@@ -32,9 +37,9 @@ const GlobalStyle = createGlobalStyle`
 const Container = styled.div`
   max-width: 80rem;
   margin: 0 auto;
-  border: 1px solid black;
   min-height: 100vh;
   background-image: linear-gradient(to right bottom, white, rgba(220, 221, 225, 1));
+  box-shadow: 0 1rem 2rem rgba(25, 42, 86, 1);
 `
 const rotate = keyframes`
   from{transform: rotate(0)}
@@ -103,6 +108,8 @@ const App = () => {
   const [category, setCategory] = useState(null)
   const [difficulty, setDifficulty] = useState(null)
   const [sound, setSound] = useState(false)
+  const [isSubmited, setIsSubmited] = useState(false)
+  const [isTimeFinished, setIsTimeFinished] = useState(false)
 
   useEffect(() => {
     let apiKey = "https://opentdb.com/api.php?amount=10&type=multiple"
@@ -137,7 +144,6 @@ const App = () => {
       .catch(err => {
         setError(true)
       })
-    console.log("UseEffect")
   }, [category, difficulty])
 
   useEffect(() => {
@@ -252,39 +258,44 @@ const App = () => {
     setIsFinished(true)
     playSound(4000)
     history.push("/quiz-summary")
-    return questions.map(ques => ques.answers.map(ans => (ans.isCorrect === true && ans.isSelected === true ? setScore(prevState => (prevState += 10)) : null)))
+
+    return !isFinished && questions.map(ques => ques.answers.map(ans => (ans.isCorrect === true && ans.isSelected === true ? setScore(prevState => (prevState += 10)) : null)))
   }
 
   const inputChangeHandler = event => setInputValue(event.target.value)
 
   const inputSubmitHandler = (event, history) => {
     event.preventDefault()
-    if (inputValue.trim() !== "" || storedName) {
-      setName(inputValue)
-      const quizTimeinterval = setInterval(() => {
-        setRemainedTime(prevState => prevState - 1)
-      }, 1000)
 
-      setTimeout(() => {
-        clearInterval(quizTimeinterval)
-        setIsFinished(true)
-        finishQuiz(history)
-      }, 67000)
-      const quizStartInterval = setInterval(() => {
-        setQuizStartCountDown(prevState => prevState - 1)
-        playSound(400)
-      }, 1000)
+    if (isSubmited === false) {
+      if (inputValue.trim() !== "" || storedName) {
+        setName(inputValue)
+        const quizTimeinterval = setInterval(() => {
+          setRemainedTime(prevState => prevState - 1)
+        }, 1000)
 
-      setTimeout(() => {
-        history.push("/questions")
-        clearInterval(quizStartInterval)
-      }, 7000)
-      if (!storedName) {
-        window.localStorage.setItem("name", inputValue)
-        setStoredName(window.localStorage.getItem("name"))
+        setTimeout(() => {
+          clearInterval(quizTimeinterval)
+          setIsTimeFinished(true)
+        }, 67000)
+
+        const quizStartInterval = setInterval(() => {
+          setQuizStartCountDown(prevState => prevState - 1)
+          playSound(400)
+        }, 1000)
+
+        setTimeout(() => {
+          history.push("/questions")
+          clearInterval(quizStartInterval)
+        }, 7000)
+        if (!storedName) {
+          window.localStorage.setItem("name", inputValue)
+          setStoredName(window.localStorage.getItem("name"))
+        }
+      } else {
+        alert("please enter valid name")
       }
-    } else {
-      alert("please enter valid name")
+      setIsSubmited(true)
     }
   }
 
@@ -300,9 +311,8 @@ const App = () => {
     window.localStorage.removeItem("name")
     setStoredName(null)
   }
-
   let categoryName = null
-  if (category === 9) categoryName = "General Knowledge"
+  if (category === 9) categoryName = "General"
   else if (category === 21) categoryName = "Sports"
   else if (category === 10) categoryName = "Books"
   else if (category === 11) categoryName = "Film"
@@ -356,11 +366,26 @@ const App = () => {
             difficulty={difficulty}
             sound={sound}
             currentQuestion={currentQuestion}
+            isTimeFinished={isTimeFinished}
           />
         )}
       />
 
-      <Route to='/quiz-summary' render={({ history }) => <QuizSummary history={history} isFinished={isFinite} score={score} questions={questions} />} />
+      <Route
+        to='/quiz-summary'
+        render={({ history }) => (
+          <QuizSummary
+            history={history}
+            isFinished={isFinite}
+            score={score}
+            questions={questions}
+            hintCount={hintCount}
+            wrongAnswersDeleted={wrongAnswersDeleted}
+            correctAnswerSelected={correctAnswerSelected}
+            isSubmited={isSubmited}
+          />
+        )}
+      />
     </Switch>
   )
   if (error) content = <ErrorPage />
@@ -373,47 +398,6 @@ const App = () => {
         <h1>Trivia Db Quiz</h1>
         <FontAwesomeIcon icon={faCrosshairs} />
       </Header>
-
-      {/* <StyledQuestions remainedTime={remainedTime * 1.666666666}>
-        <div className='questionsHeader'>
-          <div className='remainedTime'>{remainedTime}</div>
-
-          <div className='questionInformations'>
-            <div className='questionCategory'>Category: Film</div>
-            <div className='questionsDifficulty'>Difficulty: Hard</div>
-          </div>
-          <div className='questionJokers'>
-            <button className='fiftyfifty'>
-              <FontAwesomeIcon icon={faPooStorm} /> 50%
-            </button>
-            <button className='hint'>
-              <FontAwesomeIcon icon={faLightbulb} /> Hint <span className='hintCount'>3</span>
-            </button>
-            <button className='selectCorrectAnswer'>
-              <FontAwesomeIcon icon={faClipboardCheck} /> Correct
-            </button>
-          </div>
-        </div>
-        <div className='questionContent'>
-          <div className='question'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ipsam neque quo similique fugiat enim harum esse dolor modi libero quis, totam aspernatur quos inventore blanditiis
-            voluptatibus vero ullam asperiores?
-          </div>
-          <div className='answers'>
-            <ul>
-              <li className='answer'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut.</li>
-              <li className='answer'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut.</li>
-              <li className='answer'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut.</li>
-              <li className='answer'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut.</li>
-            </ul>
-          </div>
-        </div>
-        <div className='questionButtons'>
-          <button>Previous</button>
-          <button>Next</button>
-          <button>Finish</button>
-        </div>
-      </StyledQuestions> */}
       {content}
     </Container>
   )

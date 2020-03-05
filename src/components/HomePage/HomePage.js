@@ -11,7 +11,7 @@ const buttonAnimation = keyframes`
   100% {outline: 6px solid black;outline-color:  rgba(39, 60, 117,1.0);}
 `
 
-const StyledHomePage = styled.section`
+const StyledHomePage = styled.main`
   color: red;
 
   .optionHeader {
@@ -38,12 +38,11 @@ const StyledHomePage = styled.section`
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    width: 20rem;
+    width: 25%;
     padding: 1rem 0;
     margin: 1rem;
-    border: none;
-    color: #eee;
-    box-shadow: 0 1rem 2rem rgba(39, 60, 117, 0.4);
+    border: 1px solid rgba(39, 60, 117, 1);
+    box-shadow: 0 0.6rem 1.2rem rgba(39, 60, 117, 0.6);
     font-family: "Fredoka One", cursive;
     font-size: 1.3rem;
     letter-spacing: 2px;
@@ -53,6 +52,7 @@ const StyledHomePage = styled.section`
     transition: all 0.3s;
 
     &:hover {
+      color: white;
       background-color: rgba(39, 60, 117, 1);
     }
 
@@ -97,6 +97,7 @@ const StyledHomePage = styled.section`
     display: inline-block;
     height: 5rem;
     padding: 1.3rem;
+    margin-left: 2rem;
     border: none;
     box-shadow: 0 0.4rem 0.8rem rgba(53, 59, 72, 0.3);
     font-family: inherit;
@@ -160,7 +161,8 @@ const StyledHomePage = styled.section`
 `
 
 const CategoryButton = styled.button`
-  background-color: ${({ category, categoryNum }) => (category === categoryNum ? "rgba(39, 60, 117,1.0)" : "rgba(232, 65, 24,1.0)")};
+  color: ${({ category, categoryNum }) => (category === categoryNum ? "white" : "rgba(25, 42, 86, 1)")};
+  background-color: ${({ category, categoryNum }) => (category === categoryNum ? "rgba(39, 60, 117,1.0)" : "rgba(251, 197, 49,1.0)")};
   animation: ${({ category, categoryNum }) =>
     category === categoryNum &&
     css`
@@ -170,7 +172,8 @@ const CategoryButton = styled.button`
 `
 
 const DifficultyButton = styled.button`
-  background-color: ${({ difficulty, difficultyLevel }) => (difficulty === difficultyLevel ? "rgba(39, 60, 117,1.0)" : "rgba(232, 65, 24,1.0)")};
+  color: ${({ difficulty, difficultyLevel }) => (difficulty === difficultyLevel ? "white" : "rgba(25, 42, 86, 1)")};
+  background-color: ${({ difficulty, difficultyLevel }) => (difficulty === difficultyLevel ? "rgba(39, 60, 117,1.0)" : "rgba(251, 197, 49,1.0)")};
   animation: ${({ difficulty, difficultyLevel }) =>
     difficulty === difficultyLevel &&
     css`
@@ -224,7 +227,7 @@ const HomePage = ({
         </h2>
         <div className='categoryButtons'>
           <CategoryButton category={category} categoryNum={9} onClick={() => categorySelectHandler(9)}>
-            <FontAwesomeIcon icon={faGlobeAmericas} /> Generel Knowledge
+            <FontAwesomeIcon icon={faGlobeAmericas} /> General
           </CategoryButton>
           <CategoryButton category={category} categoryNum={23} onClick={() => categorySelectHandler(23)}>
             <FontAwesomeIcon icon={faHourglassStart} /> History
