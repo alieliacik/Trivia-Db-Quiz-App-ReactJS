@@ -123,7 +123,7 @@ const StyledQuestions = styled.section`
     .question {
       font-size: 2.3rem;
       font-weight: 500;
-      margin: 2rem;
+      margin: 0.5rem 2rem;
       min-height: 6rem;
       z-index: 2;
     }
