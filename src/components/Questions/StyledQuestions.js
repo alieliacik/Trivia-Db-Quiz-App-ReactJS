@@ -109,7 +109,6 @@ const StyledQuestions = styled.section`
         text-align: center;
         width: 1.5rem;
         height: 1.5rem;
-        padding-top: 0.1rem;
         border-radius: 50%;
         color: rgba(194, 54, 22, 1);
         background-color: rgba(251, 197, 49, 1);
