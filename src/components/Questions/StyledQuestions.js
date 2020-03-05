@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components"
 
 const StyledQuestions = styled.section`
-  padding: 0 3rem 2rem 3rem;
+  padding: 0 3rem 0.1rem 3rem;
   min-height: calc(100vh - 21vh);
   display: flex;
   flex-direction: column;
