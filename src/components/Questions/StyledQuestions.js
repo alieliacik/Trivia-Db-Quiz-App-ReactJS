@@ -136,9 +136,8 @@ const StyledQuestions = styled.section`
 
     &::before {
       content: open-quote;
-      top: -1rem;
+      top: -3rem;
       left: 2rem;
-      line-height: 1;
       color: #192a56;
       font-size: 17rem;
       position: absolute;
