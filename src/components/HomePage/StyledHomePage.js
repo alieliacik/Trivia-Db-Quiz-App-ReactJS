@@ -105,12 +105,16 @@ const StyledHomePage = styled.main`
   .inputLabel {
     position: absolute;
     top: 10%;
-    left: 16%;
+    left: 17%;
     font-size: 1.6rem;
     color: black;
     visibility: visible;
     opacity: 1;
     transition: all 0.2s;
+
+    @media (max-width: 38em) {
+      left: 16%;
+    }
   }
 
   .inputButton {
