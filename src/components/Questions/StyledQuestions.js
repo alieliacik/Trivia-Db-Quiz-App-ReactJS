@@ -79,6 +79,7 @@ const StyledQuestions = styled.section`
         &:disabled {
           opacity: 0.4;
           transform: none;
+          cursor: not-allowed;
         }
         & > svg {
           margin-right: 0.2rem;
@@ -185,6 +186,7 @@ const StyledQuestions = styled.section`
       &:disabled {
         opacity: 0.5;
         transform: none;
+        cursor: not-allowed;
       }
 
       @media (max-width: 43.75em) {
