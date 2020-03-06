@@ -73,7 +73,7 @@ const App = () => {
   }, [storedName])
 
   const selectAnswerHandler = (questionId, answerId) => {
-    playSound(400)
+    playSound(1000)
     const cloneQuestions = [...questions]
     const cloneQuestion = cloneQuestions[questionId]
     const cloneAnswers = [...cloneQuestion.answers]
@@ -115,7 +115,7 @@ const App = () => {
       setQuestions(cloneQuestions)
     }
     setWrongAnswersDeleted(true)
-    playSound(400)
+    playSound(1000)
   }
 
   const playSound = duration => {
@@ -141,7 +141,7 @@ const App = () => {
     cloneQuestions[questionId] = cloneQuestion
     setQuestions(cloneQuestions)
     setHintCount(prevState => prevState - 1)
-    playSound(400)
+    playSound(1000)
   }
 
   const correctAnswerHandler = questionId => {
@@ -163,7 +163,7 @@ const App = () => {
     } else {
       alert("There is just one option")
     }
-    playSound(400)
+    playSound(1000)
   }
 
   const nextQuestion = () => {
@@ -176,7 +176,7 @@ const App = () => {
 
   const finishQuiz = history => {
     setIsFinished(true)
-    playSound(4000)
+    playSound(10000)
     history.push("/quiz-summary")
 
     return !isFinished && questions.map(ques => ques.answers.map(ans => (ans.isCorrect === true && ans.isSelected === true ? setScore(prevState => (prevState += 10)) : null)))
@@ -201,7 +201,7 @@ const App = () => {
 
         const quizStartInterval = setInterval(() => {
           setQuizStartCountDown(prevState => prevState - 1)
-          playSound(400)
+          playSound(1000)
         }, 1000)
 
         setTimeout(() => {
