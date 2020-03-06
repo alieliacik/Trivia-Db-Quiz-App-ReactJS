@@ -39,7 +39,7 @@ const QuizSummary = ({ history, isFinished, score, questions, wrongAnswersDelete
 
       <div className='summaryButtons'>
         <button className='summaryButton summaryChavronDownButton' onClick={toggleStatsHandler}>
-          <FontAwesomeIcon className='summaryIcons summaryChavronUp' icon={faChevronDown} /> Stats
+          <FontAwesomeIcon className='summaryIcons summaryChavronDown' icon={faChevronUp} /> Stats
         </button>
         <button className='summaryButton summarySyncAltButton' onClick={homePagePushHandler}>
           <FontAwesomeIcon className='summaryIcons summarySyncAlt' icon={faSyncAlt} /> Play Again
