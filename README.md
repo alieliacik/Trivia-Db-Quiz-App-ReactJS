@@ -45,7 +45,7 @@
 
 <hr>
 
-<strong> I showed the user question's category and difficulty level for each question. When I took data from API, some of them had 'Category: part some of them not. I removed 'Category: ' conditionally if they have and added to all of them. Whit this technic I prevented duplication. The difficulty level had not capitalized; I made it capitalized with 'toUpperCase()' and 'slice()' methods.</strong>
+<strong> I showed the user question's category and difficulty level for each question. When I took data from API, some of them had 'Category: part some of them not. I removed 'Category: ' conditionally if they have and added to all of them. With this technic I prevented duplication. The difficulty level had not capitalized; I made it capitalized with 'toUpperCase()' and 'slice()' methods.</strong>
 
 &nbsp;
 ![3](https://user-images.githubusercontent.com/57728302/76018550-399c6680-5eee-11ea-9b73-b36cdc1f1d3b.JPG)
@@ -65,8 +65,8 @@
 
 <h2> For Beter User Experience </h2>
 
-&nbsp;
-<strong>If the user doesn't fill the name input area, app fires alert. </br>
+&nbsp;<strong>
+If the user doesn't fill the name input area, app fires alert. </br>
 If the user doesn't select the category or the difficulty level, the app brings random questions for the unselected section. </br> 
 After the user fill up the input name area app doesn't ask username until the user clicks the rename icon.</br>
 The Previous button for the first question, the Next button for the last question, lifeline chance buttons if the user doesn't have any unclickable.</br>
