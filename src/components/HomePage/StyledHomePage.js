@@ -130,6 +130,10 @@ const StyledHomePage = styled.main`
     &:focus {
       outline: none;
     }
+
+    &:active {
+      background-color: rgba(194, 54, 22, 1);
+    }
   }
 
   .quizStartContent {
