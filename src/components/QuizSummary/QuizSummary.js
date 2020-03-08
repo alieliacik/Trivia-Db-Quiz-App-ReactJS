@@ -3,7 +3,7 @@ import { CSSTransition } from "react-transition-group"
 import CountUp from "react-countup"
 import StyledQuizSummary, { AnswerSummary } from "./StyledQuizSummary"
 
-import { faSyncAlt, faChevronUp, faTimes, faCheck } from "@fortawesome/free-solid-svg-icons"
+import { faSyncAlt, faChevronDown, faTimes, faCheck } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import gameFinished from "../../assets/sounds/gameFinished.wav"
@@ -39,7 +39,7 @@ const QuizSummary = ({ history, isFinished, score, questions, wrongAnswersDelete
 
       <div className='summaryButtons'>
         <button className='summaryButton summaryChavronDownButton' onClick={toggleStatsHandler}>
-          <FontAwesomeIcon className='summaryIcons summaryChavronDown' icon={faChevronUp} /> Stats
+          <FontAwesomeIcon className='summaryIcons summaryChavronDown' icon={faChevronDown} /> Stats
         </button>
         <button className='summaryButton summarySyncAltButton' onClick={homePagePushHandler}>
           <FontAwesomeIcon className='summaryIcons summarySyncAlt' icon={faSyncAlt} /> Play Again
